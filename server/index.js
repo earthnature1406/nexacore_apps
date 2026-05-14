@@ -24,7 +24,7 @@ const CLIENT_ORIGIN = process.env.CLIENT_ORIGIN || 'http://localhost:5173, http:
 
 const allowedOrigins = CLIENT_ORIGIN.split(',').map((origin) => origin.trim()).filter(Boolean);
 
-app.use(helmet());
+app.set('trust proxy', 1);
 app.use(express.json({ limit: '10kb' }));
 app.use(express.urlencoded({ extended: false }));
 app.use(morgan(NODE_ENV === 'production' ? 'combined' : 'dev'));
