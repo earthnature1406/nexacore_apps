@@ -1,0 +1,13 @@
+services:
+  web:
+    build: .
+    ports:
+      - '3000:3000'
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
+      - JWT_SECRET=replace-with-secure-secret
+      - CLIENT_ORIGIN=http://localhost:3000
+    volumes:
+      - ./server/data:/usr/src/app/server/data
+    restart: unless-stopped
