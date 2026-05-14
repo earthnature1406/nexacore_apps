@@ -46,7 +46,7 @@ export default function Contact() {
     <div className="page-content" style={{ padding: '60px 24px', maxWidth: '580px', margin: '0 auto' }}>
       <div className="contact-wrap">
         <h1 style={{ fontSize: '2.2rem', fontWeight: 800, marginBottom: '12px', textAlign: 'center' }}>Contact Us</h1>
-        <p style={{ textAlign: 'center', color: 'rgba(255,255,255,0.6)', marginBottom: '40px' }}>Have a project in mind? Let's build something extraordinary together.</p>
+        <p style={{ textAlign: 'center', color: 'rgba(255,255,255,0.6)', marginBottom: '40px' }}>Have a project in mind? Let&apos;s build something extraordinary together.</p>
 
         <div className="contact-info-box">
           <h3 style={{ fontSize: '1.1rem', color: '#fff', marginBottom: '12px' }}>Our Office</h3>

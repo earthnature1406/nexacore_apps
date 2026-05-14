@@ -23,7 +23,7 @@ export default function Home() {
               <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/><path d="M12 8a4 4 0 100 8 4 4 0 000-8z"/></svg>
             </div>
             <h3 style={{ fontSize: '1.05rem', fontWeight: 700, marginBottom: '10px' }}>Cutting-Edge Innovation</h3>
-            <p style={{ fontSize: '0.88rem', color: 'rgba(255,255,255,0.6)', lineHeight: 1.65 }}>We harness thin-line innovative and next-generation technology to push the boundaries of what's possible.</p>
+            <p style={{ fontSize: '0.88rem', color: 'rgba(255,255,255,0.6)', lineHeight: 1.65 }}>We harness thin-line innovative and next-generation technology to push the boundaries of what&apos;s possible.</p>
           </div>
           <div className="value-card">
             <div className="value-icon">
