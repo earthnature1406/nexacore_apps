@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -7,40 +7,67 @@
 @layer base {
   html {
     scroll-behavior: smooth;
-    background-color: #f9f9ff;
+    background-color: #0a0a12;
   }
 
   body {
     margin: 0;
     min-height: 100vh;
     font-family: 'Inter', sans-serif;
-    color: #111827;
-    background-color: #f9f9ff;
+    color: #fff;
+    background-color: #0a0a12;
+    display: flex;
+    flex-direction: column;
   }
 
   #root {
     min-height: 100vh;
-  }
-
-  a {
-    color: inherit;
-  }
-
-  button,
-  input,
-  textarea,
-  select {
-    font: inherit;
-  }
-
-  .material-symbols-outlined {
-    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-    display: inline-block;
-    line-height: 1;
-    text-transform: none;
-    letter-spacing: normal;
-    word-wrap: normal;
-    white-space: nowrap;
-    direction: ltr;
+    display: flex;
+    flex-direction: column;
   }
 }
+
+/* NAV */
+.nav-links a { transition: color 0.2s; }
+.nav-links a:hover, .nav-links a.active { color: #fff; }
+.nav-links a.active { border-bottom: 2px solid #3b82f6; padding-bottom: 2px; }
+
+/* PAGES */
+.page-content { flex: 1; padding-top: 60px; }
+
+/* HOME HERO */
+.hero { text-align: center; padding: 100px 24px 80px; background: radial-gradient(ellipse at 50% 40%, rgba(30,58,138,0.18) 0%, transparent 70%); }
+.btn-primary { background: #3b82f6; color: #fff; padding: 12px 28px; border-radius: 6px; font-weight: 600; font-size: 0.95rem; border: none; cursor: pointer; transition: background 0.2s; }
+.btn-primary:hover { background: #2563eb; }
+.btn-outline { background: transparent; color: #fff; padding: 12px 28px; border-radius: 6px; font-weight: 600; font-size: 0.95rem; border: 2px solid rgba(255,255,255,0.3); cursor: pointer; transition: border-color 0.2s; }
+.btn-outline:hover { border-color: #fff; }
+
+/* CORE VALUES */
+.value-icon { width: 72px; height: 72px; border-radius: 50%; background: #0f2266; display: flex; align-items: center; justify-content: center; margin: 0 auto 18px; }
+.value-icon svg { width: 34px; height: 34px; stroke: #fff; fill: none; stroke-width: 1.5; }
+
+/* SERVICES */
+.service-card { background: rgba(15,22,60,0.35); border: 1px solid #1e3a8a; border-radius: 10px; padding: 32px 28px; }
+.service-card .svc-icon { width: 48px; height: 48px; margin-bottom: 16px; }
+.service-card .svc-icon svg { width: 48px; height: 48px; stroke: #fff; fill: none; stroke-width: 1.4; }
+
+/* CAREERS */
+.careers-hero { text-align: center; padding: 60px 24px 40px; background: radial-gradient(ellipse at 50% 0%, rgba(30,58,138,0.2) 0%, transparent 65%); }
+.blue-line { height: 2px; background: linear-gradient(90deg, transparent, #3b82f6, transparent); margin: 0; }
+.position-card { background: rgba(15,22,60,0.4); border: 1px solid #1e3a8a; border-radius: 8px; padding: 22px 18px; }
+.position-badge { font-size: 0.72rem; color: #3b82f6; font-weight: 600; background: rgba(59,130,246,0.12); padding: 2px 8px; border-radius: 20px; display: inline-block; margin-bottom: 10px; }
+.btn-apply { background: #3b82f6; color: #fff; padding: 9px 20px; border-radius: 5px; font-weight: 600; font-size: 0.85rem; border: none; cursor: pointer; width: 100%; transition: background 0.2s; }
+.btn-apply:hover { background: #2563eb; }
+.benefit-icon svg { width: 34px; height: 34px; stroke: #fff; fill: none; stroke-width: 1.4; }
+
+/* CONTACT */
+.contact-info-box { background: rgba(15,22,60,0.35); border: 1px solid #1e3a8a; border-radius: 8px; padding: 24px; text-align: center; margin-bottom: 40px; }
+.form-group input, .form-group textarea, .form-group select { width: 100%; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.12); border-radius: 6px; padding: 12px 14px; color: #fff; font-size: 0.92rem; font-family: inherit; outline: none; transition: border-color 0.2s; }
+.form-group input:focus, .form-group textarea:focus, .form-group select:focus { border-color: #3b82f6; }
+.btn-submit { width: 100%; background: #3b82f6; color: #fff; padding: 13px; border-radius: 6px; font-weight: 700; font-size: 1rem; border: none; cursor: pointer; transition: background 0.2s; margin-top: 6px; }
+.btn-submit:hover { background: #2563eb; }
+.btn-submit:disabled { opacity: 0.6; cursor: not-allowed; }
+
+/* FOOTER */
+.footer-links a { transition: color 0.2s; }
+.footer-links a:hover { color: #fff; }

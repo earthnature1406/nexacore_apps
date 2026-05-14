@@ -1,49 +1,59 @@
 import { Link } from 'react-router-dom';
-import logoUrl from '../assets/logo.jpeg';
 
-const Footer = () => {
+export default function Footer() {
   return (
-    <footer className="bg-surface-container-high border-t border-outline-variant">
-      <div className="flex flex-col md:flex-row justify-between items-start w-full px-margin-mobile lg:px-margin-desktop py-xl max-w-[1440px] mx-auto gap-xl">
-        <div className="max-w-sm">
-          <div className="flex items-center gap-3 mb-md">
-            <div className="w-6 h-6 text-primary">
-              <img src={logoUrl} alt="ML LABS Logo" className="w-full h-full object-contain" />
-            </div>
-            <h2 className="text-on-surface text-lg font-bold tracking-tight">ML LABS</h2>
+    <footer style={{ background: '#07070f', padding: '60px 48px 30px', borderTop: '1px solid rgba(255,255,255,0.06)', marginTop: 'auto' }}>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '40px', maxWidth: '1100px', margin: '0 auto' }}>
+        <div className="footer-brand">
+          <div className="logo-text" style={{ fontSize: '1.3rem', fontWeight: 700, marginBottom: '12px', color: '#fff', display: 'flex', alignItems: 'center', gap: '8px' }}>
+            <svg viewBox="0 0 28 28" fill="none" stroke="#3b82f6" strokeWidth="1.6" style={{ width: '24px', height: '24px' }}>
+              <circle cx="14" cy="14" r="12" />
+              <ellipse cx="14" cy="14" rx="5" ry="12" />
+              <line x1="2" y1="14" x2="26" y2="14" />
+              <line x1="4" y1="8" x2="24" y2="8" />
+              <line x1="4" y1="20" x2="24" y2="20" />
+            </svg>
+            Nexacore
           </div>
-          <p className="font-body-sm text-body-sm text-on-surface-variant mb-md leading-relaxed">
-            ML LABS PRIVATE LIMITED.<br />
-            #52, 3rd Cross, Aswath Nagar,<br />
-            Marathahalli, Bengaluru,<br />
-            Karnataka-560037.
+          <p style={{ fontSize: '0.85rem', color: 'rgba(255,255,255,0.55)', lineHeight: 1.6, marginBottom: '8px' }}>
+            Advancing the frontier of corporate intelligence through rigorous data engineering and AI implementation.
           </p>
-          <div className="flex gap-md">
-            <a href="#" className="text-on-surface-variant hover:text-primary transition-colors"><span className="material-symbols-outlined">language</span></a>
-            <a href="#" className="text-on-surface-variant hover:text-primary transition-colors"><span className="material-symbols-outlined">mail</span></a>
+        </div>
+        
+        <div className="footer-col">
+          <h4 style={{ fontSize: '1.05rem', fontWeight: 700, marginBottom: '20px', color: '#fff' }}>Services</h4>
+          <div className="footer-links" style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+            <Link to="/services" style={{ textDecoration: 'none' }}>Data Science</Link>
+            <Link to="/services" style={{ textDecoration: 'none' }}>Data Engineering</Link>
+            <Link to="/services" style={{ textDecoration: 'none' }}>DevOps</Link>
+            <Link to="/services" style={{ textDecoration: 'none' }}>Artificial Intelligence</Link>
           </div>
         </div>
-
-        <div className="grid grid-cols-2 gap-xxl w-full md:w-auto">
-          <div className="flex flex-col gap-sm">
-            <span className="font-label-md text-label-md text-on-surface uppercase font-bold mb-xs">Platform</span>
-            <Link to="/about" className="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-all">About Us</Link>
-            <Link to="/services" className="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-all">Services</Link>
-            <Link to="/careers" className="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-all">Careers</Link>
+        
+        <div className="footer-col">
+          <h4 style={{ fontSize: '1.05rem', fontWeight: 700, marginBottom: '20px', color: '#fff' }}>Company</h4>
+          <div className="footer-links" style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+            <Link to="/about" style={{ textDecoration: 'none' }}>About Us</Link>
+            <Link to="#" style={{ textDecoration: 'none' }}>Privacy Policy</Link>
+            <Link to="#" style={{ textDecoration: 'none' }}>Terms of Service</Link>
+            <a href="#" style={{ textDecoration: 'none' }}>LinkedIn</a>
           </div>
-          <div className="flex flex-col gap-sm">
-            <span className="font-label-md text-label-md text-on-surface uppercase font-bold mb-xs">Legal</span>
-            <a href="#" className="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-all">Privacy Policy</a>
-            <a href="#" className="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-all">Terms of Service</a>
-            <a href="#" className="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-all">Cookie Policy</a>
-          </div>
+        </div>
+        
+        <div className="footer-col">
+          <h4 style={{ fontSize: '1.05rem', fontWeight: 700, marginBottom: '20px', color: '#fff' }}>Contact</h4>
+          <p style={{ fontSize: '0.85rem', color: 'rgba(255,255,255,0.55)', lineHeight: 1.6, marginBottom: '8px' }}>
+            #52, 3rd Cross, Aswanth Nagar,<br />
+            Marathahalli, Bengaluru,<br />
+            Karnataka-560037
+          </p>
+          <p style={{ color: '#3b82f6', marginTop: '12px', fontSize: '0.85rem' }}>solutions@nexacore.com</p>
         </div>
       </div>
-      <div className="px-margin-mobile lg:px-margin-desktop py-md max-w-[1440px] mx-auto border-t border-outline-variant text-center md:text-left">
-        <p className="font-body-sm text-body-sm text-on-surface-variant opacity-70">© 2018 ML LABS PRIVATE LIMITED. All rights reserved.</p>
+      
+      <div className="footer-bottom" style={{ textAlign: 'center', paddingTop: '24px', marginTop: '40px', borderTop: '1px solid rgba(255,255,255,0.06)', fontSize: '0.8rem', color: 'rgba(255,255,255,0.4)' }}>
+        &copy; 2024 Nexacore AI Technologies. All rights reserved.
       </div>
     </footer>
   );
-};
-
-export default Footer;
+}

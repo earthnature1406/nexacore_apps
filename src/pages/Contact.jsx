@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 const apiBaseUrl = import.meta.env.VITE_API_BASE_URL || '/api';
 
-const Contact = () => {
+export default function Contact() {
   const [formData, setFormData] = useState({
     fullName: '',
     email: '',
@@ -43,158 +43,55 @@ const Contact = () => {
   };
 
   return (
-    <div className="max-w-[1440px] mx-auto px-4 md:px-10 py-20">
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
-        <div className="lg:col-span-7 flex flex-col gap-8 bg-white p-8 rounded-2xl shadow-sm border border-gray-200">
-          <div className="flex flex-col gap-3">
-            <h1 className="text-4xl font-bold text-gray-900">Contact Us</h1>
-            <p className="text-gray-600 text-lg">
-              We are here to help you with AI, Machine Learning, Cloud, and Enterprise Software Solutions.
-            </p>
-          </div>
+    <div className="page-content" style={{ padding: '60px 24px', maxWidth: '580px', margin: '0 auto' }}>
+      <div className="contact-wrap">
+        <h1 style={{ fontSize: '2.2rem', fontWeight: 800, marginBottom: '12px', textAlign: 'center' }}>Contact Us</h1>
+        <p style={{ textAlign: 'center', color: 'rgba(255,255,255,0.6)', marginBottom: '40px' }}>Have a project in mind? Let's build something extraordinary together.</p>
 
-          {status.success && (
-            <div className="bg-green-50 border border-green-300 text-green-700 p-4 rounded-lg">
-              {status.success}
-            </div>
-          )}
-
-          {status.error && (
-            <div className="bg-red-50 border border-red-300 text-red-700 p-4 rounded-lg">
-              {status.error}
-            </div>
-          )}
-
-          <form className="flex flex-col gap-6" onSubmit={handleSubmit}>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="flex flex-col gap-2">
-                <label htmlFor="fullName" className="font-medium text-gray-700">
-                  Full Name
-                </label>
-                <input
-                  id="fullName"
-                  type="text"
-                  placeholder="John Doe"
-                  value={formData.fullName}
-                  onChange={handleChange}
-                  required
-                  className="w-full h-12 px-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#0077B6] focus:border-[#0077B6] outline-none"
-                />
-              </div>
-              <div className="flex flex-col gap-2">
-                <label htmlFor="email" className="font-medium text-gray-700">
-                  Email Address
-                </label>
-                <input
-                  id="email"
-                  type="email"
-                  placeholder="john@example.com"
-                  value={formData.email}
-                  onChange={handleChange}
-                  required
-                  className="w-full h-12 px-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#0077B6] focus:border-[#0077B6] outline-none"
-                />
-              </div>
-            </div>
-
-            <div className="flex flex-col gap-2">
-              <label htmlFor="subject" className="font-medium text-gray-700">
-                Subject
-              </label>
-              <select
-                id="subject"
-                value={formData.subject}
-                onChange={handleChange}
-                required
-                className="w-full h-12 px-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#0077B6] focus:border-[#0077B6] outline-none"
-              >
-                <option value="">Select a topic</option>
-                <option value="consulting">AI Consulting</option>
-                <option value="partnership">Technical Partnership</option>
-                <option value="support">Enterprise Support</option>
-                <option value="development">Software Development</option>
-                <option value="other">General Inquiry</option>
-              </select>
-            </div>
-
-            <div className="flex flex-col gap-2">
-              <label htmlFor="message" className="font-medium text-gray-700">
-                Your Message
-              </label>
-              <textarea
-                id="message"
-                rows="6"
-                placeholder="Tell us about your project or inquiry..."
-                value={formData.message}
-                onChange={handleChange}
-                required
-                className="w-full p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#0077B6] focus:border-[#0077B6] outline-none resize-none"
-              />
-            </div>
-
-            <button
-              type="submit"
-              disabled={status.loading}
-              className="bg-[#0077B6] hover:bg-[#005F8F] text-white font-semibold py-3 px-8 rounded-lg transition-colors shadow-md w-fit disabled:cursor-not-allowed disabled:opacity-60"
-            >
-              {status.loading ? 'Sending...' : 'Send Message'}
-            </button>
-          </form>
+        <div className="contact-info-box">
+          <h3 style={{ fontSize: '1.1rem', color: '#fff', marginBottom: '12px' }}>Our Office</h3>
+          <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '0.9rem', lineHeight: 1.6 }}>
+            #52, 3rd Cross, Aswanth Nagar,<br/>
+            Marathahalli, Bengaluru,<br/>
+            Karnataka-560037
+          </p>
+          <a href="mailto:solutions@nexacore.com" className="email" style={{ color: '#3b82f6', fontWeight: 500, marginTop: '10px', display: 'inline-block', textDecoration: 'none' }}>solutions@nexacore.com</a>
         </div>
 
-        <div className="lg:col-span-5 flex flex-col gap-8">
-          <div className="bg-[#0077B6] text-white p-8 rounded-2xl shadow-sm flex flex-col gap-8 h-full justify-center">
-            <div className="flex gap-4 items-start">
-              <div className="bg-white/10 p-3 rounded-lg">📍</div>
-              <div>
-                <h3 className="text-xl font-semibold mb-2">Visit Our Office</h3>
-                <p className="opacity-90 leading-7">
-                  #52, 3rd Cross, Aswath Nagar,
-                  <br />
-                  Marathahalli, Bengaluru,
-                  <br />
-                  Karnataka - 560037
-                </p>
-              </div>
-            </div>
-
-            <div className="flex gap-4 items-start">
-              <div className="bg-white/10 p-3 rounded-lg">✉️</div>
-              <div>
-                <h3 className="text-xl font-semibold mb-2">Email Us</h3>
-                <div className="flex flex-col gap-2">
-                  <a
-                    href="mailto:hr@themllabs.com"
-                    className="opacity-90 hover:underline hover:text-blue-200 transition-colors"
-                  >
-                    hr@themllabs.com
-                  </a>
-                  <a
-                    href="mailto:bharath@themllabs.com"
-                    className="opacity-90 hover:underline hover:text-blue-200 transition-colors"
-                  >
-                    bharath@themllabs.com
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <div className="flex gap-4 items-start">
-              <div className="bg-white/10 p-3 rounded-lg">📞</div>
-              <div>
-                <h3 className="text-xl font-semibold mb-2">Call Us</h3>
-                <p className="opacity-90 leading-7">
-                  +91 XXXXX XXXXX
-                  <br />
-                  Mon - Fri, 9:00 AM - 6:00 PM IST
-                </p>
-              </div>
-            </div>
+        {status.success && (
+          <div style={{ background: 'rgba(16, 185, 129, 0.1)', border: '1px solid rgba(16, 185, 129, 0.4)', color: '#34d399', padding: '12px', borderRadius: '6px', marginBottom: '20px' }}>
+            {status.success}
           </div>
-        </div>
+        )}
+
+        {status.error && (
+          <div style={{ background: 'rgba(239, 68, 68, 0.1)', border: '1px solid rgba(239, 68, 68, 0.4)', color: '#f87171', padding: '12px', borderRadius: '6px', marginBottom: '20px' }}>
+            {status.error}
+          </div>
+        )}
+
+        <form onSubmit={handleSubmit}>
+          <div className="form-group">
+            <label htmlFor="fullName">Full Name</label>
+            <input type="text" id="fullName" placeholder="Your name" value={formData.fullName} onChange={handleChange} required />
+          </div>
+          <div className="form-group">
+            <label htmlFor="email">Email Address</label>
+            <input type="email" id="email" placeholder="you@example.com" value={formData.email} onChange={handleChange} required />
+          </div>
+          <div className="form-group">
+            <label htmlFor="subject">Subject</label>
+            <input type="text" id="subject" placeholder="How can we help?" value={formData.subject} onChange={handleChange} required />
+          </div>
+          <div className="form-group">
+            <label htmlFor="message">Message</label>
+            <textarea id="message" placeholder="Tell us about your project..." value={formData.message} onChange={handleChange} required></textarea>
+          </div>
+          <button type="submit" className="btn-submit" disabled={status.loading}>
+            {status.loading ? 'Sending...' : 'Send Message'}
+          </button>
+        </form>
       </div>
     </div>
   );
-};
-
-export default Contact;
+}

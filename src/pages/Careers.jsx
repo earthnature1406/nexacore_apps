@@ -1,89 +1,68 @@
-const Careers = () => {
+import { Link } from 'react-router-dom';
+
+export default function Careers() {
   return (
-    <div>
-      {/* Hero Section */}
-      <section className="relative h-[400px] flex items-center overflow-hidden bg-on-background">
-        <div className="absolute inset-0 z-0 opacity-40">
-          <img 
-            alt="Join the Future of AI" 
-            className="w-full h-full object-cover" 
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1-2prE9bf1CkiZaGjrzboo7gFyRuDiXkX3Y0DL11VJIK0VFsyjIuiLTqndfEn7Fixvu7_Nqjj_hQZru_CJPwhjuv1yXIfFYrRJGczTfvkQeRo7jt5n1K6lrREWbAz7y-nGwRdZWpLNLMVdajLXMLyvkkv_fCzAdCkTL9W9BTSZ611dO2EMnBSTuuLsM4LXq9ZhCGHdlnRvnKYQ50CRjuEXxHJVVVHFnvx-TtgxrRD8Rx5JOAc5v0yx6ScT_THMBZWDNtQ_Ur3VT5y" 
-          />
-        </div>
-        <div className="relative z-10 w-full px-margin-desktop max-w-[1440px] mx-auto">
-          <div className="max-w-2xl">
-            <h1 className="font-display-lg text-display-lg text-white mb-md">Join the Future of AI</h1>
-            <p className="font-body-lg text-body-lg text-surface-variant mb-xl">
-              At ML LABS, we are building the next generation of precision intelligence. We seek visionary minds to solve complex enterprise challenges through cutting-edge machine learning.
-            </p>
-            <a href="#open-positions" className="bg-primary text-on-primary px-xl py-md rounded-lg font-body-md font-bold hover:bg-opacity-90 transition-all inline-block">
-              View Openings
-            </a>
+    <div className="page-content">
+      <div className="careers-hero">
+        <h1>Join the Future</h1>
+        <p>Shape the future of AI with a world-class team at Nexacore AI Technologies.</p>
+      </div>
+      <div className="blue-line"></div>
+      <div className="positions-section" style={{ padding: '50px 48px' }}>
+        <h2 style={{ fontSize: '1.3rem', fontWeight: 700, marginBottom: '24px' }}>Open Positions</h2>
+        <div className="positions-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '16px' }}>
+          <div className="position-card">
+            <div className="position-badge">1 Position Open</div>
+            <h3 style={{ fontSize: '1rem', fontWeight: 700, marginBottom: '8px' }}>Data Scientist</h3>
+            <p style={{ fontSize: '0.82rem', color: 'rgba(255,255,255,0.6)', lineHeight: 1.6, marginBottom: '18px' }}>Apply advanced statistical models and machine learning algorithms to extract actionable insights from complex datasets.</p>
+            <button className="btn-apply">Apply Now</button>
+          </div>
+          <div className="position-card">
+            <div className="position-badge">1 Position Open</div>
+            <h3 style={{ fontSize: '1rem', fontWeight: 700, marginBottom: '8px' }}>Data Engineer</h3>
+            <p style={{ fontSize: '0.82rem', color: 'rgba(255,255,255,0.6)', lineHeight: 1.6, marginBottom: '18px' }}>Design and build scalable data pipelines and infrastructure to support analytics and AI applications at scale.</p>
+            <button className="btn-apply">Apply Now</button>
+          </div>
+          <div className="position-card">
+            <div className="position-badge">1 Position Open</div>
+            <h3 style={{ fontSize: '1rem', fontWeight: 700, marginBottom: '8px' }}>AI/ML Engineer</h3>
+            <p style={{ fontSize: '0.82rem', color: 'rgba(255,255,255,0.6)', lineHeight: 1.6, marginBottom: '18px' }}>Develop and deploy cutting-edge AI models and machine learning systems that power intelligent automation.</p>
+            <button className="btn-apply">Apply Now</button>
+          </div>
+          <div className="position-card">
+            <div className="position-badge">1 Position Open</div>
+            <h3 style={{ fontSize: '1rem', fontWeight: 700, marginBottom: '8px' }}>DevOps Engineer</h3>
+            <p style={{ fontSize: '0.82rem', color: 'rgba(255,255,255,0.6)', lineHeight: 1.6, marginBottom: '18px' }}>Build and maintain CI/CD pipelines, cloud infrastructure, and monitoring systems for high-availability deployments.</p>
+            <button className="btn-apply">Apply Now</button>
           </div>
         </div>
-      </section>
-
-      {/* Benefits Section */}
-      <section className="bg-surface-container py-xxl">
-        <div className="px-margin-desktop max-w-[1440px] mx-auto">
-          <div className="text-center mb-xl">
-            <h2 className="font-headline-lg text-headline-lg">Designed for High Performance</h2>
-            <p className="font-body-md text-body-md text-on-surface-variant mt-sm">We take care of the details so you can focus on the data.</p>
+      </div>
+      <div className="benefits-section" style={{ padding: '10px 48px 60px' }}>
+        <h2 style={{ fontSize: '1.3rem', fontWeight: 700, marginBottom: '28px' }}>Benefits</h2>
+        <div className="benefits-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '32px', maxWidth: '760px' }}>
+          <div className="benefit">
+            <div className="benefit-icon" style={{ marginBottom: '12px' }}>
+              <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+            </div>
+            <h3 style={{ fontSize: '0.97rem', fontWeight: 700, marginBottom: '8px' }}>Health & Wellness</h3>
+            <p style={{ fontSize: '0.83rem', color: 'rgba(255,255,255,0.55)', lineHeight: 1.65 }}>Comprehensive health coverage, mental wellness programs, and accessibility for you and your family.</p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-xl">
-            <div className="bg-surface-bright p-xl rounded-xl shadow-sm border border-outline-variant">
-              <span className="material-symbols-outlined text-primary text-3xl mb-md">health_and_safety</span>
-              <h4 className="font-headline-sm text-headline-sm mb-xs">Comprehensive Health</h4>
-              <p className="font-body-sm text-body-sm text-on-surface-variant">Top-tier health insurance for you and your family, with a focus on mental wellness.</p>
+          <div className="benefit">
+            <div className="benefit-icon" style={{ marginBottom: '12px' }}>
+              <svg viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg>
             </div>
-            <div className="bg-surface-bright p-xl rounded-xl shadow-sm border border-outline-variant">
-              <span className="material-symbols-outlined text-primary text-3xl mb-md">school</span>
-              <h4 className="font-headline-sm text-headline-sm mb-xs">Learning Stipends</h4>
-              <p className="font-body-sm text-body-sm text-on-surface-variant">Annual budget for conferences, certifications, and advanced degrees in STEM.</p>
-            </div>
-            <div className="bg-surface-bright p-xl rounded-xl shadow-sm border border-outline-variant">
-              <span className="material-symbols-outlined text-primary text-3xl mb-md">calendar_today</span>
-              <h4 className="font-headline-sm text-headline-sm mb-xs">Flexible Schedules</h4>
-              <p className="font-body-sm text-body-sm text-on-surface-variant">Hybrid work model and flexible hours to accommodate your peak productivity cycles.</p>
-            </div>
+            <h3 style={{ fontSize: '0.97rem', fontWeight: 700, marginBottom: '8px' }}>Learning & Development</h3>
+            <p style={{ fontSize: '0.83rem', color: 'rgba(255,255,255,0.55)', lineHeight: 1.65 }}>Professional growth resources, conference budgets, online courses, and mentorship for continuous learning.</p>
           </div>
-        </div>
-      </section>
-
-      {/* Job Board Section */}
-      <section className="py-xxl px-margin-desktop max-w-[1440px] mx-auto" id="open-positions">
-        <div className="flex flex-col md:flex-row justify-between items-end mb-xl gap-md">
-          <div>
-            <h2 className="font-headline-lg text-headline-lg">Open Positions</h2>
-            <p className="font-body-md text-body-md text-on-surface-variant mt-xs">Current opportunities at our Bengaluru Headquarters.</p>
+          <div className="benefit">
+            <div className="benefit-icon" style={{ marginBottom: '12px' }}>
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <h3 style={{ fontSize: '0.97rem', fontWeight: 700, marginBottom: '8px' }}>Flexibility & Remote</h3>
+            <p style={{ fontSize: '0.83rem', color: 'rgba(255,255,255,0.55)', lineHeight: 1.65 }}>Work-life balance with flexible hours and fully remote options so you can thrive from anywhere.</p>
           </div>
         </div>
-        
-        <div className="space-y-md">
-          {[
-            { title: 'Senior ML Engineer', dept: 'Engineering', type: 'Full-Time' },
-            { title: 'Data Scientist', dept: 'Data Science', type: 'Full-Time' },
-            { title: 'Research Lead', dept: 'Research', type: 'Full-Time' },
-            { title: 'Frontend Developer (React)', dept: 'Engineering', type: 'Full-Time' }
-          ].map((job, index) => (
-            <div key={index} className="group flex flex-col md:flex-row justify-between items-start md:items-center p-lg bg-surface-bright border border-outline-variant rounded-xl hover:border-primary transition-all cursor-pointer">
-              <div>
-                <h3 className="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors">{job.title}</h3>
-                <div className="flex gap-md mt-xs">
-                  <span className="font-label-md text-label-md text-secondary uppercase tracking-tighter">{job.dept}</span>
-                  <span className="font-label-md text-label-md text-secondary uppercase tracking-tighter">{job.type}</span>
-                </div>
-              </div>
-              <div className="mt-md md:mt-0 flex items-center gap-md">
-                <span className="font-body-md text-body-md text-on-surface-variant">Bengaluru HQ</span>
-                <span className="material-symbols-outlined text-primary group-hover:translate-x-2 transition-transform">arrow_forward</span>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
+      </div>
     </div>
   );
-};
-
-export default Careers;
+}
