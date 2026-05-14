@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import logo from '../../logo.jpeg';
 
 export default function Footer() {
   return (
@@ -6,13 +7,7 @@ export default function Footer() {
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '40px', maxWidth: '1100px', margin: '0 auto' }}>
         <div className="footer-brand">
           <div className="logo-text" style={{ fontSize: '1.3rem', fontWeight: 700, marginBottom: '12px', color: '#fff', display: 'flex', alignItems: 'center', gap: '8px' }}>
-            <svg viewBox="0 0 28 28" fill="none" stroke="#3b82f6" strokeWidth="1.6" style={{ width: '24px', height: '24px' }}>
-              <circle cx="14" cy="14" r="12" />
-              <ellipse cx="14" cy="14" rx="5" ry="12" />
-              <line x1="2" y1="14" x2="26" y2="14" />
-              <line x1="4" y1="8" x2="24" y2="8" />
-              <line x1="4" y1="20" x2="24" y2="20" />
-            </svg>
+            <img src={logo} alt="Nexacore logo" style={{ width: '24px', height: '24px', objectFit: 'contain' }} />
             Nexacore
           </div>
           <p style={{ fontSize: '0.85rem', color: 'rgba(255,255,255,0.55)', lineHeight: 1.6, marginBottom: '8px' }}>

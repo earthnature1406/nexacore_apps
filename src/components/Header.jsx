@@ -1,4 +1,5 @@
 import { Link, useLocation } from 'react-router-dom';
+import logo from '../../logo.jpeg';
 
 export default function Header() {
   const location = useLocation();
@@ -7,13 +8,7 @@ export default function Header() {
   return (
     <nav style={{ position: 'fixed', top: 0, left: 0, right: 0, zIndex: 100, background: 'rgba(10,10,18,0.97)', borderBottom: '1px solid rgba(255,255,255,0.05)', padding: '0 48px', height: '60px', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
       <Link to="/" className="nav-logo" style={{ display: 'flex', alignItems: 'center', gap: '10px', fontSize: '1.2rem', fontWeight: 700, color: '#fff', textDecoration: 'none' }}>
-        <svg viewBox="0 0 28 28" fill="none" stroke="#3b82f6" strokeWidth="1.6" style={{ width: '28px', height: '28px' }}>
-          <circle cx="14" cy="14" r="12" />
-          <ellipse cx="14" cy="14" rx="5" ry="12" />
-          <line x1="2" y1="14" x2="26" y2="14" />
-          <line x1="4" y1="8" x2="24" y2="8" />
-          <line x1="4" y1="20" x2="24" y2="20" />
-        </svg>
+        <img src={logo} alt="Nexacore logo" style={{ width: '32px', height: '32px', objectFit: 'contain' }} />
         Nexacore
       </Link>
       <div className="nav-links" style={{ display: 'flex', gap: '36px', alignItems: 'center' }}>
